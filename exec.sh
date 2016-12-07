@@ -1,0 +1,1 @@
+python /root/simple_ftp_server.py $(curl ipecho.net/plain) # $(ip route | awk 'NR==2{print $9}')
