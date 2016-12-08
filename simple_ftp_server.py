@@ -15,7 +15,10 @@ def setupHandler():
     if "FTP_USERS" in env:
         userlist = env["FTP_USERS"].split(',')
         passwordlist = env["FTP_PASSWORDS"].split(',')
+        print userlist
+        print passwordlist
         for u, p in zip(userlist, passwordlist):
+            print u, p
             authorizer.add_user(u, p, STORAGE_PATH, perm='elradfmwM')
 
         if "ENABLE_FTP_ENORMOUS" in env:
